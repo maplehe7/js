@@ -1,0 +1,28 @@
+.font{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+  
+}
+.font p{
+    font-size: large;
+}
+.div{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+
+    flex-direction: column;
+    
+
+}
+.img{
+    width: 50vh;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    border-radius: 50px;
+    
+}
