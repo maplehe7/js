@@ -12,20 +12,27 @@ button.addEventListener("mouseleave",function(){
     button.style.fontSize = vari+"px"
     vari = vari + 10
 })
+let colors = ["red","orange","yellow","green","blue","pink","purple"];
 button.addEventListener("click",function(){
-    button.style.color = "green"
+    if (colornumber == 7){
+        colornumber = 0;
+    }
+    button.style.color = colors[colornumber]
+    colornumber++
     vari = 15
     button.style.fontSize = vari+"px"
     button.textContent = "good,you clicked me";
 })
-let colors = ["red","orange","yellow","green","blue","pink","purple"];
+
 let colornumber = 0;
 window.addEventListener ("keydown",function(event){
     if(event.key == "a"||event.key == "A"){
         if (colornumber == 7){
             colornumber = 0;
         }
+        
         button.style.color = colors[colornumber]
+        sleep(100)
         colornumber++
     }
     
@@ -51,3 +58,13 @@ let items = document.getElementsByTagName("li");
 for(let i = 0; i < items.length; i++){
     items[i].style.backgroundColor="yellow";
 }
+class Student{
+    constructor(name,grade,gpa){
+        this.name = name;
+        this.grade = grade;
+        this.gpa = gpa;
+    
+    }
+}
+let timmy = new Student("Timmy",12,5)
+console.log("Timmy's GPA is",timmy.gpa)
