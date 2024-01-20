@@ -42,10 +42,11 @@
     }
 
     function handleClick() {
-        alert("Clicked!");
+        document.getElementById('clickElement').style.backgroundColor = "#eee";
     }
 
     function handleHoverOn() {
+        document.getElementById('hoverOnOffElement').style.backgroundColor = "#eee";
         document.getElementById('hoverOnOffElement').style.fontWeight = "bold";
     }
 
@@ -54,20 +55,21 @@
     }
 
     function handleResize() {
-        alert("Resized!");
+        document.getElementById('resizeElement').style.backgroundColor = "#eee";
     }
     function handleKey(){
       document.getElementById('keyElement').style.backgroundColor = "#eee";
     }
     
-
+    
     
     document.getElementById('hoverElement').addEventListener('mouseover', handleHover);
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("keydown",handleKey);
     document.getElementById('clickElement').addEventListener('click', handleClick);
     document.getElementById('hoverOnOffElement').addEventListener('mouseover', handleHoverOn);
-    document.getElementById('keyElement').addEventListener("keydown",handleKey);
     document.getElementById('hoverOnOffElement').addEventListener('mouseout', handleHoverOff);
-    document.getElementById('resizeElement').addEventListener('resize', handleResize);
+
 </script>
 
 </body>
