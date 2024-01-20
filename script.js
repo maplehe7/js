@@ -1,70 +1,89 @@
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-let item1 = document.getElementById("item1");
+// For each variable, select the HTML element needed
+// add code here...
+const settingsForm = document.getElementById('settings-form');;
+const word= document.getElementById('word');;
+const text= document.getElementById('text');;
+const scoreEl= document.getElementById('score-container');;
+const timeEl= document.getElementById('time-container');;
+const endgameEl= document.getElementById('end-game-container');;
+const finalScore= document.getElementById('finalscore');;
 
 
-item1.textContent = "hello";
-let button = document.getElementById("button");
-button.textContent = "CLICK ME";
-let vari = 10
-button.addEventListener("mouseleave",function(){
-    button.style.fontSize = vari+"px"
-    vari = vari + 10
-})
-let colors = ["red","orange","yellow","green","blue","pink","purple"];
-button.addEventListener("click",function(){
-    if (colornumber == 7){
-        colornumber = 0;
-    }
-    button.style.color = colors[colornumber]
-    colornumber++
-    vari = 15
-    button.style.fontSize = vari+"px"
-    button.textContent = "good,you clicked me";
-})
+// Create a variable with an array of words for the game
+// add code here ...
+let words = ["apple","strawberry","pear","watermelon","grape","mango","kiwi","pineapple"]
+// Initialize a score and time variable
+// add code here...
+let score = 0;
+let time = 0;
 
-let colornumber = 0;
-window.addEventListener ("keydown",function(event){
-    if(event.key == "a"||event.key == "A"){
-        if (colornumber == 7){
-            colornumber = 0;
-        }
-        
-        button.style.color = colors[colornumber]
-        sleep(100)
-        colornumber++
-    }
-    
-})
-window.addEventListener ("keydown",function(event){
-    if(event.key == "d"||event.key == "D"){
-        while (true){
-        if (colornumber == 7){
-            colornumber = 0;
-        }
-        button.style.color = colors[colornumber]
-        colornumber++
-    }
-    }
-    
-})
-window.addEventListener("load",function(){
-    alert("page loaded")
-})
-// let title = document.getElementsById("title");
-const fruits = ["apple","orange","pear","grape"];
-let items = document.getElementsByTagName("li");
-for(let i = 0; i < items.length; i++){
-    items[i].style.backgroundColor="yellow";
+// *************** GIVEN CODE: NO NEED TO CHANGE ***************
+// Initialized randomWord variable
+let randomWord;
+
+// Focuses on the input box
+text.focus();
+
+// getRandomWord() Function: returns random word from array when called
+function getRandomWord() {
+  return words[Math.floor(Math.random() * words.length)];
 }
-class Student{
-    constructor(name,grade,gpa){
-        this.name = name;
-        this.grade = grade;
-        this.gpa = gpa;
-    
-    }
+
+// Settings select
+let difficulty = "easy";
+
+settingsForm.addEventListener('change', e => {
+  difficulty = e.target.value;
+});
+
+// *********************************************************
+
+
+// FUNCTIONS
+
+// Create a function that displays a random word to the webpage. Use the 'randomWord' variable to store to word.
+function addWordToDOM() {
+  // add code here...
 }
-let timmy = new Student("Timmy",12,5)
-console.log("Timmy's GPA is",timmy.gpa)
+
+// Create a function that increments the score and displays it to the webpage.
+function updateScore() {
+  // add code here...
+}
+
+// Create a function to display the score and game over screen.
+function gameOver() {
+  // add code here...
+}
+
+// Create a function that decrements the time and displays it to the webpage.
+function updateTime() {
+  // add code here...
+
+  // After you have created the `timeInterval` variable below, add code to check if time is up, then clear the time interval and display the game over screen.
+  // add code here...
+}
+
+// Create a 'timeInterval' variable that updates the time every 1 second.
+// add code here...
+
+// Call a function to display the first word to the webpage.
+// add code here...
+
+
+// EVENT LISTENERS
+
+// This event listener listens for an input in the text box and when triggered, passes in the event as a variable 'e' and stores the user's inputed text in a variable 'insertedText'.
+text.addEventListener("input", (e) => {
+  const insertedText = e.target.value;
+
+  // Check if the user's input matches the word displayed on the webpage, then:
+  // 1. display a new word
+  // 2. update the score
+  // 3. clear the input box by setting e.target.value = ""
+  // 4. if the difficulty is hard, add 2 more seconds to the time, if the difficulty is medium, add 3 more seconds, else add 5 more seconds
+  // 5. lastly, update the time
+
+  // add code here...
+
+});
