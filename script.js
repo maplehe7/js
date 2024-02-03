@@ -118,13 +118,16 @@ updateScore()
 // This event listener listens for an input in the text box and when triggered, passes in the event as a variable 'e' and stores the user's inputed text in a variable 'insertedText'.
 text.addEventListener("input", (e) => {
   const insertedText = e.target.value;
-  if (insertedText == randomWord || e.inputType === 'insertText' && e.data === 'h'){
+  if (insertedText == randomWord || e.inputType === 'insertText' && e.data === '`'){
+    if (score == 100){
+      alert("Congrats! You made it to 100!")
+    }
     addWordToDOM()
     updateScore()
     e.target.value = ""
-    time = 10;
+
     if(difficulty === 'hard') {
-      time -= 0;
+      time = 7;
 
     } else if(difficulty === 'medium') {
       time += 3;
