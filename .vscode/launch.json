@@ -6,11 +6,12 @@
     "configurations": [
 
 
+
         {
             "type": "chrome",
             "request": "launch",
             "name": "Open lol.html",
-            "file": "c:\\Users\\kevin\\js\\itemlist.html"
+            "file": "c:\\Users\\kevin\\js\\module5\\index.html"
         }
     ]
 }

@@ -6,6 +6,7 @@ function addItem(event) {
 
     event.preventDefault()
     let newItem = document.createElement("li")
+    
     newItem.className = "list-group-item"
     let button = document.createElement("button")
     button.className = "btn btn-danger btn-sm float-right delete"
@@ -23,7 +24,7 @@ function filterItems(event) {
     let text = event.target.value
     let allListItems = document.getElementsByTagName("li")
     Array.from(allListItems).forEach(function (element) {
-        let elementName = element.firstChild.textContent;
+        let elementName = element.firstChild.textContent.toLowerCase();
         if (elementName.indexOf(text) != -1) {
             element.style.display = "block"
         }
