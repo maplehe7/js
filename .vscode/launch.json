@@ -4,26 +4,20 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-<<<<<<< HEAD
         
-=======
 
->>>>>>> d6396b87da19b3502e8b857bcbdf0f41f4150ad3
+        
 
 
         {
             "type": "chrome",
             "request": "launch",
             "name": "Open lol.html",
-<<<<<<< HEAD
-            "file": "c:\\Users\\kevin\\js\\module5\\index.html"
-=======
-<<<<<<< HEAD
-            "file": "${workspaceFolder}/index.html"
-=======
-            "file": "c:\\Users\\kevin\\js\\itemlist.html"
->>>>>>> d6396b87da19b3502e8b857bcbdf0f41f4150ad3
->>>>>>> 8dedf53642127e02960703da9effb3b7f2c94c99
+
+            "file": "c:\\Users\\kevin\\js\\project5\\index.html"
+
+
+
         }
     ]
 }
