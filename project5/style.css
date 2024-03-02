@@ -28,9 +28,7 @@ body {
     cursor: pointer;
   }
   
-  ul li:first-of-type {
-    text-decoration: underline;
-  }
+ 
   
   #menu {
     display: flex;
