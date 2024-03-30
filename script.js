@@ -5,10 +5,36 @@ const text= document.getElementById('text');
 const scoreEl= document.getElementById('score-container');
 const timeEl= document.getElementById('time-container');
 const endgameEl= document.getElementById('end-game-container');
+const highscore= document.getElementById('highscore');
 const finalScore= document.getElementById('finalscore');
+let highscorevar = localStorage.getItem("highscore")
+console.log(highscorevar);
+if (typeof highscorevar == 'string'){
+  highscorevar = "0"
+}
 
 // Create a variable with an array of words for the game
+let verbs = [
 
+    'runs',
+    'jumps',
+    'flies',
+    'swims',
+    'thinks',
+    'dances',
+    'writes',
+    'listens',
+    'speaks',
+    'sleeps',
+    'farts',
+    'burps',
+    'sprints', 
+    'slices',
+    'dives',
+    'slices',
+    'snores'
+  
+];
 let words = [
   "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew",
   "iceberg", "jackfruit", "kiwi", "lemon", "mango", "nectarine", "orange", "papaya",
@@ -24,7 +50,7 @@ let words = [
   "magenta", "navy", "orange", "pink", "quartz", "red", "sapphire", "turquoise",
   "ultramarine", "violet", "white", "xanadu", "yellow", "zaffre"
 ];
-hardWords = ["Pneumonoultramicroscopicsilicovolcanoconiosis", // 45 letters
+let hardWords = ["Pneumonoultramicroscopicsilicovolcanoconiosis", // 45 letters
 "Floccinaucinihilipilification", // 29 letters
 "Antidisestablishmentarianism", // 28 letters
 "Honorificabilitudinitatibus", // 27 letters
@@ -67,6 +93,11 @@ function getRandomWord() {
   
 }
 
+function getRandomVerb() {
+  return verbs[Math.floor(Math.random() * verbs.length)];
+  
+}
+
 // Settings select
 let difficulty = "easy";
 
@@ -78,7 +109,8 @@ settingsForm.addEventListener('change', e => {
 
 // Create a function that displays a random word to the webpage. Use the 'randomWord' variable to store to word.
 function addWordToDOM() {
-  randomWord = getRandomWord();
+  randomWord1 = getRandomWord();
+  randomWord = "The" + " " + randomWord1 + " " + getRandomVerb() + "."
   document.getElementById('word').textContent = randomWord;
 }
 
@@ -92,6 +124,17 @@ function updateScore() {
 function gameOver() {
   endgameEl.style.display = "block"
   finalScore.textContent= "Final Score: "+ score
+  console.log("b4 if");
+  if (score > Number(highscorevar)){
+    console.log("in if");
+    highscorevar = score
+    localStorage.setItem("highscorevar", highscorevar.toString)
+    highscore.textContent = "High Score: "+ highscorevar
+  }
+  else{
+
+    highscore.textContent = "High Score: "+ highscorevar
+  }
 }
 
 // Create a function that decrements the time and displays it to the webpage.
@@ -130,10 +173,11 @@ text.addEventListener("input", (e) => {
       time = 7;
 
     } else if(difficulty === 'medium') {
-      time += 3;
+      time += 8;
     } else {
-      time += 5;
+      time += 10;
     }
+
     updateTime()
   }
 });

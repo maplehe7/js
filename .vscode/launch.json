@@ -7,6 +7,8 @@
 
 
 
+
+
         
 
         
@@ -17,7 +19,7 @@
             "request": "launch",
             "name": "Open lol.html",
 
-            "file": "${workspaceFolder}/module6/index.html"
+            "file": "${workspaceFolder}/lol.html"
 
 
 

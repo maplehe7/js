@@ -60,6 +60,7 @@ form.addEventListener("submit", (event) => {
         input.value = "";
 
     }
+   
     else {
         editingItem.textContent = input.value;
         list = Array.from(document.getElementsByTagName("p")).map((item) => item.textContent)
