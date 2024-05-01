@@ -7,9 +7,15 @@ const timeEl= document.getElementById('time-container');
 const endgameEl= document.getElementById('end-game-container');
 const highscore= document.getElementById('highscore');
 const finalScore= document.getElementById('finalscore');
-let highscorevar = localStorage.getItem("highscore")
-console.log(highscorevar);
-if (typeof highscorevar == 'string'){
+let highscorevar = localStorage.getItem("highscorevar")
+console.log(highscorevar.toString());
+if (!(typeof highscorevar !== 'undefined' && highscorevar !== null)){
+  console.log("Setting high score to 0");
+  highscorevar = "0"
+}
+
+if(highscorevar.toString() == "function toString() { [native code] }"){
+  console.log("Equals function");
   highscorevar = "0"
 }
 
@@ -128,7 +134,8 @@ function gameOver() {
   if (score > Number(highscorevar)){
     console.log("in if");
     highscorevar = score
-    localStorage.setItem("highscorevar", highscorevar.toString)
+    highscoreString = highscorevar.toString()
+    localStorage.setItem("highscorevar", highscoreString)
     highscore.textContent = "High Score: "+ highscorevar
   }
   else{

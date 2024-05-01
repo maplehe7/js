@@ -3,7 +3,7 @@
   }
   
   body {
-    background-color: #2c3e50;
+    background-color: #007cf990;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,7 +19,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     border-radius: 0;
-    background-color: #a7c5e3;
+    background-color: #84c1ff;
   }
   
   select:focus {
@@ -31,7 +31,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(44, 209, 255, 0.556);
     height: 70px;
     color: #fff;
     display: flex;
@@ -46,10 +46,10 @@
   }
   
   #container {
-    background-color: #34495e;
+    background-color: #1457c3;
     padding: 20px;
     border-radius: 4px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 5px rgba(9, 67, 228, 0.3);
     color: #fff;
     position: relative;
     text-align: center;
@@ -57,7 +57,7 @@
   }
   
   h2 {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(16, 130, 196, 0.3);
     padding: 8px;
     border-radius: 4px;
     margin: 0 0 40px;
