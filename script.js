@@ -8,7 +8,7 @@ const endgameEl= document.getElementById('end-game-container');
 const highscore= document.getElementById('highscore');
 const finalScore= document.getElementById('finalscore');
 let highscorevar = localStorage.getItem("highscorevar")
-console.log(highscorevar.toString());
+
 if (!(typeof highscorevar !== 'undefined' && highscorevar !== null)){
   console.log("Setting high score to 0");
   highscorevar = "0"
